@@ -25,6 +25,22 @@
         .site-header h1 { font-size: 24pt; color: #fff; border: none; margin: 0 0 8px; text-align: left; }
         .site-header p { margin: 4px 0; font-size: 12pt; color: #e6f5ff; }
         .site-header .author { font-weight: bold; color: #ffffff; background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 20px; font-size: 11pt; }
+        .header-link { display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.16); color: #fff; text-decoration: none; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); font-weight: 700; }
+        .header-link:hover { background: rgba(255,255,255,0.24); }
+        .checklist-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 14px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: #003366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0, 51, 102, 0.16);
+        }
+        .checklist-cta:hover { background: #005a8c; transform: translateY(-1px); }
 
         /* ===== TÍTULOS ===== */
         h1 { font-size: 22pt; color: #003366; border-bottom: 3px solid #003366; padding-bottom: 5px; text-align: center; }
@@ -56,6 +72,30 @@
         .item { width: 32%; }
         .subitem { width: 42%; }
         .nota { font-style: italic; color: #555; }
+
+        /* ===== INDICAÇÃO DE ROLAGEM HORIZONTAL ===== */
+        .table-hint {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px 0 4px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: #f7fbff;
+            border: 1px solid #cfe0f0;
+            color: #005a8c;
+            font-size: 9.5pt;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 90, 140, 0.08);
+        }
+        .table-hint .arrow {
+            animation: tableHintMove 1.2s ease-in-out infinite;
+        }
+        @keyframes tableHintMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
 
         /* ===== DEMAIS ELEMENTOS ===== */
         hr { border: 1px dashed #ccc; margin: 20px 0; }
@@ -160,6 +200,7 @@
             }
             .topico, .item, .subitem { min-width: 160px; }
             .topico a { font-size: 10.5pt; }
+            .table-hint { display: flex; }
             .site-footer { padding: 12px 10px; font-size: 9pt; }
             .back-to-top {
                 width: 44px;
@@ -190,7 +231,10 @@
         <h1>Estudo Estratégico para o TCE-MA</h1>
         <p>Material organizado para divulgação, estudo e revisão dos conteúdos do edital.</p>
     </div>
-    <span class="author">Autor: Nailton Rodrigues</span>
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <span class="author">Autor: Nailton Rodrigues</span>
+        <a class="header-link" href="checklist.html">Abrir checklist</a>
+    </div>
 </header>
 
 <!-- ===== CAPA ===== -->
@@ -200,6 +244,7 @@
     <p style="font-size:16pt; color:#003366;">Especialidade: Técnico-Administrativa</p>
     <p class="info"><strong>Plano de Estudos Completo e Detalhado</strong></p>
     <p style="font-size:12pt; color:#444;">Baseado no edital – Com links de Apoio - Todos os links estão sendo revisados e corrigidos gradualmente.</p>
+    <a class="checklist-cta" href="checklist.html">Ir para o checklist de estudos</a>
     <hr style="width: 50%; border: 2px solid #003366;">
 </div>
 
@@ -695,5 +740,22 @@
 <!-- ===== BOTÃO VOLTAR AO TOPO (aparece apenas em mobile) ===== -->
 <a href="#" class="back-to-top" title="Voltar ao topo">⬆</a>
 
+<script>
+    function addTableHints() {
+        const tables = document.querySelectorAll('table');
+        tables.forEach((table) => {
+            if (table.previousElementSibling && table.previousElementSibling.classList.contains('table-hint')) {
+                return;
+            }
+            const hint = document.createElement('div');
+            hint.className = 'table-hint';
+            hint.innerHTML = '<span class="arrow">↔</span><span>Arraste para ver o restante da tabela</span>';
+            table.parentNode.insertBefore(hint, table);
+        });
+    }
+
+    window.addEventListener('load', addTableHints);
+    window.addEventListener('resize', addTableHints);
+</script>
 </body>
 </html>

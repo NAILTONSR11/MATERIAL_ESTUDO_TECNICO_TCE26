@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Estudos - TCE-MA</title>
+    <link rel="stylesheet" href="checklist.css">
+</head>
+<body>
+    <div class="page">
+        <header class="site-header">
+            <div>
+                <p class="eyebrow">Projeto de estudos</p>
+                <h1>Checklist de Estudos TCE-MA</h1>
+                <p class="subtitle">Organize seus estudos com progresso automático e filtros inteligentes.</p>
+            </div>
+            <a class="back-link" href="index.html">← Voltar ao projeto</a>
+        </header>
+
+        <section class="hero-card">
+            <div class="hero-copy">
+                <p class="eyebrow">Progresso geral</p>
+                <h2>Monitore seu avanço em tempo real</h2>
+                <p>Marque tópicos concluídos, acompanhe a evolução por disciplina e mantenha tudo salvo automaticamente.</p>
+            </div>
+            <div class="summary-card">
+                <div class="progress-bar large">
+                    <span id="progressFill"></span>
+                </div>
+                <div class="summary-metrics">
+                    <strong id="progressPercent">0%</strong>
+                    <span id="progressCount">0 de 0 tópicos concluídos</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="toolbar-card">
+            <div class="filters">
+                <button class="filter-pill active" data-filter="all">Todos</button>
+                <button class="filter-pill" data-filter="pending">Pendentes</button>
+                <button class="filter-pill" data-filter="done">Concluídos</button>
+                <button class="filter-pill" data-filter="search">Pesquisar</button>
+            </div>
+
+            <div class="search-row">
+                <input id="searchInput" type="search" placeholder="Buscar assunto ou disciplina...">
+                <button id="searchButton" type="button">Buscar</button>
+            </div>
+
+            <div class="actions">
+                <button id="expandAllBtn" type="button">Expandir tudo</button>
+                <button id="collapseAllBtn" type="button">Recolher tudo</button>
+                <button id="markAllBtn" type="button">Marcar todos</button>
+                <button id="clearProgressBtn" type="button">Limpar progresso</button>
+                <button id="exportBtn" type="button">Exportar JSON</button>
+                <label class="import-btn">
+                    Importar JSON
+                    <input id="importInput" type="file" accept="application/json">
+                </label>
+            </div>
+
+            <p id="statusMessage" class="status-message" aria-live="polite"></p>
+        </section>
+
+        <section id="disciplines" class="disciplines"></section>
+    </div>
+
+    <script src="checklist.js"></script>
+</body>
+</html>
