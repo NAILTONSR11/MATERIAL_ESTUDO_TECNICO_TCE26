@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edital TCE-MA – Cargo 16 (Técnico-Administrativa)</title>
+    <style>
+        /* ===== RESET E ESTILOS BASE ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; margin: 0; padding: 0; background: linear-gradient(135deg, #f4f9ff 0%, #e9f3ff 100%); color: #1e1e1e; }
+        .page { max-width: 1400px; margin: 0 auto; padding: 0 24px 36px; }
+
+        /* ===== HEADER ===== */
+        .site-header { 
+            background: linear-gradient(90deg, #003366 0%, #005a8c 100%); 
+            color: #fff; padding: 24px 28px; 
+            border-radius: 0 0 18px 18px; 
+            box-shadow: 0 8px 24px rgba(0, 51, 102, 0.18); 
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .site-header h1 { font-size: 24pt; color: #fff; border: none; margin: 0 0 8px; text-align: left; }
+        .site-header p { margin: 4px 0; font-size: 12pt; color: #e6f5ff; }
+        .site-header .author { font-weight: bold; color: #ffffff; background: rgba(255,255,255,0.12); padding: 4px 12px; border-radius: 20px; font-size: 11pt; }
+
+        /* ===== TÍTULOS ===== */
+        h1 { font-size: 22pt; color: #003366; border-bottom: 3px solid #003366; padding-bottom: 5px; text-align: center; }
+        h2 { font-size: 16pt; color: #003366; margin-top: 20px; border-bottom: 1px solid #bbb; }
+        h3 { font-size: 13pt; color: #005a8c; margin-top: 15px; }
+
+        /* ===== CAPA ===== */
+        .capa { text-align: center; margin-bottom: 30px; background: linear-gradient(135deg, #ffffff 0%, #f5faff 100%); padding: 28px; border-radius: 16px; border: 1px solid #dce8f4; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05); }
+        .capa h1 { border: none; font-size: 28pt; color: #003366; }
+        .capa h2 { border: none; font-size: 20pt; color: #005a8c; }
+        .capa .info { font-size: 14pt; color: #333; }
+
+        /* ===== SUMÁRIO ===== */
+        .sumario { background: #f4f9ff; padding: 14px 16px; border-radius: 10px; margin-bottom: 25px; border: 1px solid #d6e7f4; }
+        .sumario a { text-decoration: none; color: #003366; font-weight: bold; }
+        .sumario a:hover { text-decoration: underline; }
+        .sumario ul { list-style-type: none; padding-left: 10px; }
+
+        /* ===== TABELAS ===== */
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10.5pt; }
+        th { background-color: #003366; color: white; font-weight: bold; padding: 6px 4px; text-align: center; }
+        td { padding: 5px 4px; border: 1px solid #aaa; vertical-align: top; }
+        tr:nth-child(even) { background-color: #f2f8ff; }
+        tr:nth-child(odd) { background-color: #ffffff; }
+        .codigo { font-weight: bold; color: #003366; text-align: center; width: 8%; }
+        .topico { width: 18%; font-weight: bold; }
+        .topico a { color: #003366; text-decoration: none; }
+        .topico a:hover { text-decoration: underline; }
+        .item { width: 32%; }
+        .subitem { width: 42%; }
+        .nota { font-style: italic; color: #555; }
+
+        /* ===== DEMAIS ELEMENTOS ===== */
+        hr { border: 1px dashed #ccc; margin: 20px 0; }
+        .site-footer { margin-top: 36px; padding: 18px 20px; text-align: center; background: #f3f7fb; border-top: 2px solid #cbddef; color: #506273; font-size: 10.5pt; border-radius: 14px 14px 0 0; }
+        .site-footer a { color: #003366; text-decoration: none; font-weight: bold; }
+        .site-footer a:hover { text-decoration: underline; }
+
+        /* ===== BOTÃO VOLTAR AO TOPO (oculto por padrão) ===== */
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #003366;
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            text-decoration: none;
+            z-index: 999;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .back-to-top:hover { background: #005a8c; }
+
+        /* ============================================================ */
+        /* ===== RESPONSIVIDADE ===== */
+        /* ============================================================ */
+
+        /* --- TABLET / TELAS MÉDIAS --- */
+        @media (max-width: 820px) {
+            .page { padding: 0 12px 24px; }
+            .site-header { 
+                padding: 18px 16px; 
+                border-radius: 0 0 12px 12px; 
+                flex-wrap: wrap; 
+                text-align: center; 
+                justify-content: center;
+            }
+            .site-header h1 { font-size: 18pt; line-height: 1.2; margin-bottom: 4px; }
+            .site-header p { font-size: 11pt; }
+            .site-header .author { font-size: 10pt; margin-top: 6px; }
+            .capa { padding: 20px 14px; }
+            .capa h1 { font-size: 22pt; }
+            .capa h2 { font-size: 16pt; }
+            .capa .info { font-size: 12pt; }
+            .sumario { padding: 12px; }
+            .sumario ul { padding-left: 6px; }
+            .sumario li { margin-bottom: 6px; }
+            h1 { font-size: 18pt; }
+            h2 { font-size: 15pt; }
+            h3 { font-size: 12.5pt; }
+
+            /* Tabelas com rolagem horizontal suave */
+            table { 
+                display: block; 
+                overflow-x: auto; 
+                white-space: nowrap; 
+                border: 1px solid #d1dce7;
+                -webkit-overflow-scrolling: touch;
+            }
+            th, td { 
+                min-width: 150px; 
+                padding: 8px 6px;
+            }
+            .codigo { min-width: 72px; }
+            .topico, .item, .subitem { min-width: 200px; }
+            .topico a { font-size: 11pt; }
+
+            .site-footer { padding: 14px 12px; font-size: 9.5pt; }
+
+            /* Mostra o botão voltar ao topo */
+            .back-to-top { display: flex !important; }
+        }
+
+        /* --- SMARTPHONE / TELAS PEQUENAS --- */
+        @media (max-width: 480px) {
+            body { font-size: 10.5pt; }
+            .page { padding: 0 8px 18px; }
+            .site-header { padding: 14px 10px; }
+            .site-header h1 { font-size: 16pt; }
+            .site-header p { font-size: 10pt; }
+            .site-header .author { font-size: 9pt; padding: 3px 10px; }
+            .capa { padding: 14px 8px; }
+            .capa h1 { font-size: 19pt; }
+            .capa h2 { font-size: 14pt; }
+            .capa .info { font-size: 11pt; }
+            .sumario a { font-size: 10.5pt; }
+            .sumario li { margin-bottom: 4px; }
+            h1 { font-size: 16pt; }
+            h2 { font-size: 13.5pt; }
+            h3 { font-size: 12pt; }
+            table { font-size: 9.5pt; }
+            th, td { 
+                padding: 6px 5px; 
+                min-width: 130px;
+            }
+            .topico, .item, .subitem { min-width: 160px; }
+            .topico a { font-size: 10.5pt; }
+            .site-footer { padding: 12px 10px; font-size: 9pt; }
+            .back-to-top {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+
+        /* --- IMPRESSÃO --- */
+        @media print { 
+            body { background: #fff; } 
+            .site-header { display: none; } 
+            .page { padding: 0; } 
+            .back-to-top { display: none !important; }
+            table { white-space: normal; overflow: visible; display: table; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div>
+        <h1>Estudo Estratégico para o TCE-MA</h1>
+        <p>Material organizado para divulgação, estudo e revisão dos conteúdos do edital.</p>
+    </div>
+    <span class="author">Autor: Nailton Rodrigues</span>
+</header>
+
+<!-- ===== CAPA ===== -->
+<div class="capa">
+    <h1>EDITAL TCE-MA</h1>
+    <h2>Cargo 16 – Técnico Estadual de Controle Externo</h2>
+    <p style="font-size:16pt; color:#003366;">Especialidade: Técnico-Administrativa</p>
+    <p class="info"><strong>Plano de Estudos Completo e Detalhado</strong></p>
+    <p style="font-size:12pt; color:#444;">Baseado no edital – Com links de Apoio - Todos os links estão sendo revisados e corrigidos gradualmente.</p>
+    <hr style="width: 50%; border: 2px solid #003366;">
+</div>
+
+<!-- ===== SUMÁRIO ===== -->
+<div class="sumario">
+    <h3 style="margin-top:0; color:#003366;">📑 Sumário</h3>
+    <p><strong>PARTE I – CONHECIMENTOS GERAIS</strong></p>
+    <ul>
+        <li><a href="#lp">1. Língua Portuguesa</a></li>
+        <li><a href="#inf">2. Competências Digitais e Informática</a></li>
+        <li><a href="#rl">3. Raciocínio Lógico</a></li>
+        <li><a href="#adm-geral">4. Direito Administrativo (Geral)</a></li>
+        <li><a href="#con-geral">5. Direito Constitucional (Geral)</a></li>
+        <li><a href="#ce">6. Controle Externo</a></li>
+        <li><a href="#leg">7. Legislação Específica (TCE/MA)</a></li>
+        <li><a href="#hm">8. História e Geografia do Maranhão</a></li>
+        <li><a href="#dh">9. Noções de Direitos Humanos</a></li>
+    </ul>
+    <p><strong>PARTE II – CONHECIMENTOS ESPECÍFICOS (CARGO 16)</strong></p>
+    <ul>
+        <li><a href="#dc">10. Noções de Direito Constitucional (Específico)</a></li>
+        <li><a href="#da">11. Noções de Direito Administrativo (Específico)</a></li>
+        <li><a href="#gc">12. Gestão de Contratos</a></li>
+        <li><a href="#eof">13. Execução Orçamentária e Financeira</a></li>
+    </ul>
+</div>
+
+<!-- ================================================================ -->
+<!-- PARTE I -->
+<h1>PARTE I – CONHECIMENTOS GERAIS</h1>
+
+<!-- 1. LÍNGUA PORTUGUESA -->
+<h2 id="lp">1. Língua Portuguesa</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">LP 1</td><td class="topico"><a href="https://www.todamateria.com.br/compreensao-e-interpretacao-de-textos/" target="_blank">Compreensão e Interpretação 🔗</a></td><td class="item">Leitura crítica de textos variados</td><td class="subitem">Localização de informações explícitas e implícitas; inferências; ideia central e secundária; propósito comunicativo do autor.</td></tr>
+    <tr><td class="codigo">LP 2</td><td class="topico"><a href="https://www.todamateria.com.br/generos-textuais/" target="_blank">Tipos e Gêneros Textuais 🔗</a></td><td class="item">Reconhecimento de estrutura textual</td><td class="subitem">Narrativo, descritivo, dissertativo (expositivo/argumentativo), injuntivo. Gêneros: ofício, parecer, relatório, editorial, carta, e-mail oficial.</td></tr>
+    <tr><td class="codigo">LP 3</td><td class="topico"><a href="https://www.todamateria.com.br/ortografia/" target="_blank">Ortografia Oficial 🔗</a></td><td class="item">Emprego correto das letras</td><td class="subitem">Uso de S/SS, Ç, G/J, X/CH, hífen (Novo Acordo), acentuação gráfica.</td></tr>
+    <tr><td class="codigo">LP 4</td><td class="topico"><a href="https://www.todamateria.com.br/coesao-textual/" target="_blank">Coesão Textual 🔗</a></td><td class="item">Mecanismos de referenciação e sequenciação</td><td class="subitem">Pronomes relativos, demonstrativos e possessivos (referenciação); conjunções e locuções conjuntivas (sequenciação); elipse e substituição lexical.</td></tr>
+    <tr><td class="codigo">LP 5</td><td class="topico"><a href="https://www.todamateria.com.br/tempos-e-modos-verbais/" target="_blank">Tempos e Modos Verbais 🔗</a></td><td class="item">Emprego correto dos verbos</td><td class="subitem">Presente, pretérito (perfeito, imperfeito, mais-que-perfeito) e futuro. Modos: Indicativo, Subjuntivo e Imperativo. Locuções verbais.</td></tr>
+    <tr><td class="codigo">LP 6</td><td class="topico"><a href="https://www.todamateria.com.br/classes-de-palavras/" target="_blank">Classes de Palavras 🔗</a></td><td class="item">Morfologia detalhada</td><td class="subitem">Substantivo, Adjetivo, Artigo, Numeral, Pronome, Verbo, Advérbio, Preposição, Conjunção, Interjeição.</td></tr>
+    <tr><td class="codigo">LP 7</td><td class="topico"><a href="https://www.todamateria.com.br/oracoes-coordenadas/" target="_blank">Relações de Coordenação 🔗</a></td><td class="item">Orações e termos coordenados</td><td class="subitem">Orações coordenadas sindéticas (aditiva, adversativa, alternativa, explicativa, conclusiva) e assindéticas.</td></tr>
+    <tr><td class="codigo">LP 8</td><td class="topico"><a href="https://www.todamateria.com.br/oracoes-subordinadas/" target="_blank">Relações de Subordinação 🔗</a></td><td class="item">Orações e termos subordinados</td><td class="subitem">Orações subordinadas substantivas, adjetivas e adverbiais.</td></tr>
+    <tr><td class="codigo">LP 9</td><td class="topico"><a href="https://www.todamateria.com.br/pontuacao/" target="_blank">Pontuação 🔗</a></td><td class="item">Sinais gráficos e seus usos</td><td class="subitem">Vírgula, ponto-final, ponto-e-vírgula, dois-pontos, travessão, parênteses, aspas.</td></tr>
+    <tr><td class="codigo">LP 10</td><td class="topico"><a href="https://www.todamateria.com.br/concordancia-verbal-e-nominal/" target="_blank">Concordância 🔗</a></td><td class="item">Verbal e Nominal</td><td class="subitem">Regra geral, casos especiais (coletivos, sujeito composto, pronomes de tratamento, expressões partitivas).</td></tr>
+    <tr><td class="codigo">LP 11</td><td class="topico"><a href="https://brasilescola.uol.com.br/gramatica/regencia-verbal.htm" target="_blank">Regência 🔗</a></td><td class="item">Verbal e Nominal</td><td class="subitem">Transitividade verbal; preposições exigidas pelo nome ou verbo.</td></tr>
+    <tr><td class="codigo">LP 12</td><td class="topico"><a href="https://www.todamateria.com.br/crase/" target="_blank">Crase 🔗</a></td><td class="item">Emprego do acento grave</td><td class="subitem">Regras obrigatórias e proibição; casos facultativos.</td></tr>
+    <tr><td class="codigo">LP 13</td><td class="topico"><a href="https://www.todamateria.com.br/colocacao-pronominal/" target="_blank">Colocação Pronominal 🔗</a></td><td class="item">Posição dos pronomes átonos</td><td class="subitem">Próclise, Mesóclise, Ênclise.</td></tr>
+    <tr><td class="codigo">LP 14</td><td class="topico"><a href="https://brasilescola.uol.com.br/gramatica/reescrita-de-textos-2.htm" target="_blank">Reescrita de Textos 🔗</a></td><td class="item">Transformação sem alteração de sentido</td><td class="subitem">Substituição de palavras; reorganização sintática; transposição de discurso direto/indireto.</td></tr>
+</table>
+<hr>
+
+<!-- 2. INFORMÁTICA -->
+<h2 id="inf">2. Competências Digitais e Informática Aplicada</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">INF 1</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14533.htm" target="_blank">Fundamentos Digitais 🔗</a></td><td class="item">Cultura e Cidadania Digital</td><td class="subitem">Lei 14.533/2023 (Política Nacional de Educação Digital); BNCC; letramento midiático.</td></tr>
+    <tr><td class="codigo">INF 2</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Pensamento_computacional" target="_blank">Pensamento Computacional 🔗</a></td><td class="item">Aplicação no serviço público</td><td class="subitem">Análise crítica de dados; ética no uso de algoritmos; combate à desinformação.</td></tr>
+    <tr><td class="codigo">INF 3</td><td class="topico"><a href="https://support.microsoft.com/pt-br/windows" target="_blank">Windows (Sistema Operacional) 🔗</a></td><td class="item">Gerenciamento do sistema</td><td class="subitem">Área de trabalho, Explorador de Arquivos; pastas; extensões; atalhos; Painel de Controle.</td></tr>
+    <tr><td class="codigo">INF 4</td><td class="topico"><a href="https://support.microsoft.com/pt-br/office" target="_blank">Microsoft Office (365) 🔗</a></td><td class="item">Pacote essencial</td><td class="subitem"><strong>Word</strong>: formatação, mala direta, sumário. <strong>Excel</strong>: fórmulas, gráficos, filtros, tabela dinâmica. <strong>PowerPoint</strong>: slides, animações.</td></tr>
+    <tr><td class="codigo">INF 5</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Rede_de_computadores" target="_blank">Redes de Computadores 🔗</a></td><td class="item">Arquitetura e protocolos</td><td class="subitem">LAN, MAN, WAN; Internet; Protocolos: TCP/IP, HTTP/HTTPS, SMTP, FTP.</td></tr>
+    <tr><td class="codigo">INF 6</td><td class="topico"><a href="https://support.microsoft.com/pt-br/microsoft-teams" target="_blank">Ferramentas de Colaboração 🔗</a></td><td class="item">Comunicação remota</td><td class="subitem">Webmail vs Cliente de e-mail; Microsoft Teams e Google Meet; trabalho remoto.</td></tr>
+    <tr><td class="codigo">INF 7</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Seguran%C3%A7a_da_informa%C3%A7%C3%A3o" target="_blank">Segurança da Informação 🔗</a></td><td class="item">Ameaças e Proteções</td><td class="subitem">Backup; Malwares (Vírus, Worms, Trojans, Ransomware); Firewall; Phishing, Pharming.</td></tr>
+    <tr><td class="codigo">INF 8</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank">Lei Geral de Proteção de Dados (LGPD) 🔗</a></td><td class="item">Lei 13.709/2018</td><td class="subitem">Fundamentos, princípios; bases legais; direitos do titular; DPO; setor público.</td></tr>
+    <tr><td class="codigo">INF 9</td><td class="topico"><a href="https://support.microsoft.com/pt-br/onedrive" target="_blank">Armazenamento em Nuvem 🔗</a></td><td class="item">Cloud Storage</td><td class="subitem">Conceitos (SaaS, IaaS); OneDrive e Google Drive; segurança na nuvem.</td></tr>
+    <tr><td class="codigo">INF 10</td><td class="topico"><a href="https://www.gov.br/iti/pt-br/assuntos/assinatura-digital" target="_blank">Assinatura Digital 🔗</a></td><td class="item">Documentos eletrônicos</td><td class="subitem">Assinatura eletrônica simples, avançada e qualificada (ICP-Brasil); valor jurídico.</td></tr>
+    <tr><td class="codigo">INF 11</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm" target="_blank">Marco Civil da Internet 🔗</a></td><td class="item">Lei 12.965/2014</td><td class="subitem">Princípios (neutralidade de rede, privacidade, liberdade de expressão); deveres dos provedores.</td></tr>
+    <tr><td class="codigo">INF 12</td><td class="topico"><a href="https://www.gov.br/governodigital/pt-br" target="_blank">Governo Digital 🔗</a></td><td class="item">Plataforma Gov.br</td><td class="subitem">Níveis de conta; Carteira Digital; serviços integrados (Meu INSS, CadÚnico).</td></tr>
+    <tr><td class="codigo">INF 13</td><td class="topico"><a href="https://dados.gov.br/" target="_blank">Dados Abertos 🔗</a></td><td class="item">Portal Nacional</td><td class="subitem">Conceito de dados abertos; como consumir dados públicos.</td></tr>
+    <tr><td class="codigo">INF 14</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm" target="_blank">Transparência Pública 🔗</a></td><td class="item">Lei de Acesso (LAI)</td><td class="subitem">Lei 12.527/2011: transparência ativa e passiva; prazos; exceções.</td></tr>
+    <tr><td class="codigo">INF 15</td><td class="topico"><a href="https://www.gov.br/economia/pt-br/assuntos/processo-eletronico-nacional" target="_blank">Sistemas Estruturantes 🔗</a></td><td class="item">PEN e SEI</td><td class="subitem"><strong>PEN</strong>: padronização de processos. <strong>SEI</strong>: criação de processos, assinatura, tramitação.</td></tr>
+    <tr><td class="codigo">INF 16</td><td class="topico"><a href="https://www.todamateria.com.br/inteligencia-artificial/" target="_blank">Tecnologias Emergentes 🔗</a></td><td class="item">IA e Big Data no setor público</td><td class="subitem">IA generativa (Chatbots); Big Data para políticas públicas; IoT (cidades inteligentes).</td></tr>
+    <tr><td class="codigo">INF 17</td><td class="topico"><a href="https://www.todamateria.com.br/inclusao-digital/" target="_blank">Ética e Responsabilidade Digital 🔗</a></td><td class="item">Uso ético das TICs</td><td class="subitem">Combate a fake news; inclusão digital; acessibilidade; uso responsável das redes sociais.</td></tr>
+</table>
+<hr>
+
+<!-- 3. RACIOCÍNIO LÓGICO -->
+<h2 id="rl">3. Raciocínio Lógico</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">RL 1</td><td class="topico"><a href="https://www.todamateria.com.br/logica/" target="_blank">Estruturas Lógicas 🔗</a></td><td class="item">Fundamentos</td><td class="subitem">Sentenças abertas e fechadas; frases declarativas; valor lógico verdadeiro/falso.</td></tr>
+    <tr><td class="codigo">RL 2</td><td class="topico"><a href="https://www.todamateria.com.br/logica/" target="_blank">Lógica de Argumentação 🔗</a></td><td class="item">Raciocínio crítico</td><td class="subitem">Analogias; Inferências; Deduções (silogismos); Conclusões válidas e inválidas.</td></tr>
+    <tr><td class="codigo">RL 3</td><td class="topico"><a href="https://www.todamateria.com.br/logica-matematica/" target="_blank">Lógica Proposicional 🔗</a></td><td class="item">Proposições</td><td class="subitem">Simples e Compostas; Conectivos: ~, ^, v, →, ↔.</td></tr>
+    <tr><td class="codigo">RL 4</td><td class="topico"><a href="https://www.todamateria.com.br/tabela-verdade/" target="_blank">Tabelas-Verdade 🔗</a></td><td class="item">Construção prática</td><td class="subitem">Número de linhas (2ⁿ); Valoração; Tautologia, Contradição e Contingência.</td></tr>
+    <tr><td class="codigo">RL 5</td><td class="topico"><a href="https://www.todamateria.com.br/logica/" target="_blank">Equivalências Lógicas 🔗</a></td><td class="item">Principais leis</td><td class="subitem">Dupla negação, Contrapositiva, Transposição, De Morgan.</td></tr>
+    <tr><td class="codigo">RL 6</td><td class="topico"><a href="https://www.todamateria.com.br/logica/" target="_blank">Leis de De Morgan 🔗</a></td><td class="item">Aplicações</td><td class="subitem">~(p ^ q) = ~p v ~q; ~(p v q) = ~p ^ ~q.</td></tr>
+    <tr><td class="codigo">RL 7</td><td class="topico"><a href="https://www.todamateria.com.br/diagrama-de-venn/" target="_blank">Diagramas Lógicos 🔗</a></td><td class="item">Conjuntos e proposições</td><td class="subitem">Diagramas de Venn para silogismos; relação entre conjuntos.</td></tr>
+    <tr><td class="codigo">RL 8</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/L%C3%B3gica_de_primeira_ordem" target="_blank">Lógica de Primeira Ordem 🔗</a></td><td class="item">Predicados e quantificadores</td><td class="subitem">Quantificadores Universal (∀) e Existencial (∃); negação.</td></tr>
+    <tr><td class="codigo">RL 9</td><td class="topico"><a href="https://www.todamateria.com.br/analise-combinatoria/" target="_blank">Princípios de Contagem 🔗</a></td><td class="item">Análise combinatória</td><td class="subitem">Princípio Fundamental da Contagem; Arranjo, Combinação, Permutação.</td></tr>
+    <tr><td class="codigo">RL 10</td><td class="topico"><a href="https://www.todamateria.com.br/probabilidade/" target="_blank">Probabilidade 🔗</a></td><td class="item">Conceitos iniciais</td><td class="subitem">Espaço amostral, evento; probabilidade simples; união e intersecção; probabilidade condicional.</td></tr>
+    <tr><td class="codigo">RL 11</td><td class="topico"><a href="https://www.todamateria.com.br/operacoes-com-conjuntos/" target="_blank">Operações com Conjuntos 🔗</a></td><td class="item">Teoria básica</td><td class="subitem">União, Interseção, Diferença, Complementar; cardinalidade.</td></tr>
+    <tr><td class="codigo">RL 12</td><td class="topico"><a href="https://www.todamateria.com.br/matematica/" target="_blank">Problemas Aritméticos e Geométricos 🔗</a></td><td class="item">Raciocínio quantitativo</td><td class="subitem">Regra de três, porcentagem, proporção; áreas, perímetros, volumes.</td></tr>
+</table>
+<hr>
+
+<!-- 4. DIREITO ADMINISTRATIVO GERAL -->
+<h2 id="adm-geral">4. Direito Administrativo (Geral)</h2>
+<p class="nota">* Cobrado na prova geral para o Cargo 16.</p>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">ADM G1</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Administra%C3%A7%C3%A3o_p%C3%BAblica" target="_blank">Organização Administrativa 🔗</a></td><td class="item">Estrutura do Estado</td><td class="subitem">Centralização x Descentralização; Concentração x Desconcentração.</td></tr>
+    <tr><td class="codigo">ADM G2</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Administra%C3%A7%C3%A3o_p%C3%BAblica" target="_blank">Administração Direta e Indireta 🔗</a></td><td class="item">Entidades e vínculos</td><td class="subitem">Direta; Indireta: Autarquias, Fundações Públicas, Empresas Públicas, Sociedades de Economia Mista.</td></tr>
+    <tr><td class="codigo">ADM G3</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Ato_administrativo" target="_blank">Ato Administrativo 🔗</a></td><td class="item">Elementos e atributos</td><td class="subitem">Requisitos: competência, finalidade, forma, motivo, objeto. Atributos: presunção de legitimidade, imperatividade, autoexecutoriedade.</td></tr>
+    <tr><td class="codigo">ADM G4</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Agente_p%C3%BAblico" target="_blank">Agentes Públicos 🔗</a></td><td class="item">Regime jurídico</td><td class="subitem">Conceito; Espécies: servidor estatutário, empregado público, temporário; disposições constitucionais.</td></tr>
+    <tr><td class="codigo">ADM G5</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Poderes_administrativos" target="_blank">Poderes Administrativos 🔗</a></td><td class="item">Instrumentos da Administração</td><td class="subitem">Hierárquico, Disciplinar, Regulamentar, Polícia; Uso e abuso do poder.</td></tr>
+    <tr><td class="codigo">ADM G6</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank">Licitação (Lei 14.133/2021) 🔗</a></td><td class="item">Nova Lei de Licitações</td><td class="subitem">Princípios; Modalidades; Contratação Direta; Procedimento.</td></tr>
+    <tr><td class="codigo">ADM G7</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Controle_da_administra%C3%A7%C3%A3o_p%C3%BAblica" target="_blank">Controle da Administração 🔗</a></td><td class="item">Formas de fiscalização</td><td class="subitem">Administrativo (autotutela); Judicial; Legislativo.</td></tr>
+    <tr><td class="codigo">ADM G8</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Responsabilidade_civil_do_Estado" target="_blank">Responsabilidade Civil do Estado 🔗</a></td><td class="item">Teoria do risco</td><td class="subitem">Ato comissivo (objetiva); Ato omissivo (subjetiva); Requisitos; Excludentes.</td></tr>
+    <tr><td class="codigo">ADM G9</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Desapropria%C3%A7%C3%A3o" target="_blank">Desapropriação 🔗</a></td><td class="item">Intervenção no domínio</td><td class="subitem">Conceito; Requisitos; Indenização; Desapropriação indireta e por zona.</td></tr>
+    <tr><td class="codigo">ADM G10</td><td class="topico"><a href="https://portal.stf.jus.br/jurisprudencia/sumulaVinculante.asp" target="_blank">Súmulas Vinculantes 🔗</a></td><td class="item">STF e STJ</td><td class="subitem">Principais sobre servidor público, licitação, desapropriação, responsabilidade civil.</td></tr>
+    <tr><td class="codigo">ADM G11</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm" target="_blank">Acesso à Informação e LGPD 🔗</a></td><td class="item">Leis 12.527/2011 e 13.709/2018</td><td class="subitem">LAI: transparência ativa/passiva; LGPD no âmbito administrativo.</td></tr>
+</table>
+<hr>
+
+<!-- 5. DIREITO CONSTITUCIONAL GERAL -->
+<h2 id="con-geral">5. Direito Constitucional (Geral)</h2>
+<p class="nota">* Cobrado na prova geral para o Cargo 16.</p>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">CON G1</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">CF/88 – Princípios 🔗</a></td><td class="item">Fundamento da República</td><td class="subitem">Art. 1º e 2º: Soberania, Cidadania, Dignidade, Separação dos Poderes.</td></tr>
+    <tr><td class="codigo">CON G2</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Norma_jur%C3%ADdica#Classifica%C3%A7%C3%A3o_das_normas_quanto_%C3%A0_efic%C3%A1cia" target="_blank">Aplicabilidade das Normas 🔗</a></td><td class="item">Eficácia das normas constitucionais</td><td class="subitem">Normas de eficácia plena, contida, limitada e programáticas.</td></tr>
+    <tr><td class="codigo">CON G3</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Direitos e Garantias Fundamentais 🔗</a></td><td class="item">Catálogo dos direitos</td><td class="subitem">Individuais/Coletivos (art. 5º); Direitos Sociais (art. 6º); Nacionalidade; Direitos Políticos; Partidos Políticos.</td></tr>
+    <tr><td class="codigo">CON G4</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Organização do Estado 🔗</a></td><td class="item">Entes federativos</td><td class="subitem">União, Estados, DF e Municípios; repartição de competências.</td></tr>
+    <tr><td class="codigo">CON G5</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Administração Pública 🔗</a></td><td class="item">Servidores e regime</td><td class="subitem">Arts. 37 a 41: princípios (LIMPE), acumulação, estabilidade.</td></tr>
+    <tr><td class="codigo">CON G6</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Executivo 🔗</a></td><td class="item">Presidente e Ministros</td><td class="subitem">Atribuições privativas do Presidente (art. 84); responsabilidade.</td></tr>
+    <tr><td class="codigo">CON G7</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Legislativo 🔗</a></td><td class="item">Estrutura e atribuições</td><td class="subitem">Congresso Nacional; processo legislativo; CPI.</td></tr>
+    <tr><td class="codigo">CON G8</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Judiciário 🔗</a></td><td class="item">Órgãos e competências</td><td class="subitem">STF, STJ, TRFs; CNJ.</td></tr>
+    <tr><td class="codigo">CON G9</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Funções Essenciais à Justiça 🔗</a></td><td class="item">MP e Advocacia Pública</td><td class="subitem">MP; Advocacia Pública; Defensoria Pública.</td></tr>
+    <tr><td class="codigo">CON G10</td><td class="topico"><a href="https://www.tcema.tc.br/institucional/competencias" target="_blank">Constituição do Maranhão 🔗</a></td><td class="item">Normas estaduais</td><td class="subitem">Disposições sobre o TCE/MA.</td></tr>
+</table>
+<hr>
+
+<!-- 6. CONTROLE EXTERNO -->
+<h2 id="ce">6. Controle Externo</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">CE 1</td><td class="topico"><a href="https://portal.tcu.gov.br/controle-externo/" target="_blank">Conceitos Gerais 🔗</a></td><td class="item">Tipos de controle</td><td class="subitem">Controle Interno, Externo, Parlamentar, Administrativo.</td></tr>
+    <tr><td class="codigo">CE 2</td><td class="topico"><a href="https://portal.tcu.gov.br/controle-externo/" target="_blank">Sistemas de Controle 🔗</a></td><td class="item">Modelos jurídicos</td><td class="subitem">Contencioso administrativo x Sistema da Jurisdição Una.</td></tr>
+    <tr><td class="codigo">CE 3</td><td class="topico"><a href="https://portal.tcu.gov.br/controle-externo/" target="_blank">Controle Financeiro 🔗</a></td><td class="item">Orçamento e finanças</td><td class="subitem">Legalidade, legitimidade, economicidade; fiscalização contábil, financeira, orçamentária.</td></tr>
+    <tr><td class="codigo">CE 4</td><td class="topico"><a href="https://portal.tcu.gov.br/controle-externo/" target="_blank">TCU e TCEs 🔗</a></td><td class="item">Tribunais de Contas</td><td class="subitem">Natureza jurídica; competências.</td></tr>
+    <tr><td class="codigo">CE 5</td><td class="topico"><a href="https://www.tcema.tc.br/institucional/competencias" target="_blank">TCE/MA 🔗</a></td><td class="item">Na Constituição Estadual</td><td class="subitem">Disposições específicas da CE/MA sobre o TCE/MA.</td></tr>
+    <tr><td class="codigo">CE 6</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/leis/l8429.htm" target="_blank">Lei de Improbidade 🔗</a></td><td class="item">Lei 8.429/1992</td><td class="subitem">Atos de improbidade; sanções.</td></tr>
+</table>
+<hr>
+
+<!-- 7. LEGISLAÇÃO ESPECÍFICA -->
+<h2 id="leg">7. Legislação Específica (TCE/MA)</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">LEG 1</td><td class="topico"><a href="https://www.tcema.tc.br/transparencia/regimento-interno" target="_blank">Regimento Interno 🔗</a></td><td class="item">Normas de funcionamento do TCE/MA</td><td class="subitem">Estrutura: Pleno, Câmaras; processos; prazos.</td></tr>
+    <tr><td class="codigo">LEG 2</td><td class="topico"><a href="https://www.tcema.tc.br/transparencia/lei-organica" target="_blank">Lei Orgânica (Lei 8.258/2005) 🔗</a></td><td class="item">Missão e competências do Tribunal</td><td class="subitem">Membros; incompatibilidades; atribuições.</td></tr>
+    <tr><td class="codigo">LEG 3</td><td class="topico"><a href="https://www.tcema.tc.br/institucional/estrutura-organizacional" target="_blank">Lei 9.936/2013 🔗</a></td><td class="item">Organização Administrativa</td><td class="subitem">Estrutura administrativa do TCE; cargos em comissão.</td></tr>
+    <tr><td class="codigo">LEG 4</td><td class="topico"><a href="https://www.tcema.tc.br/transparencia/instrucoes-normativas" target="_blank">IN nº 50/2017 🔗</a></td><td class="item">Instrução Normativa sobre processos</td><td class="subitem">Prazos processuais; diligências; recursos.</td></tr>
+    <tr><td class="codigo">LEG 5</td><td class="topico"><a href="https://www.tcema.tc.br/transparencia/instrucoes-normativas" target="_blank">IN nº 82/2025 🔗</a></td><td class="item">Normativa mais recente</td><td class="subitem">Mudanças: digitalização, novos prazos, adequações à Lei 14.133.</td></tr>
+</table>
+<hr>
+
+<!-- ============================================================ -->
+<!-- 8. HISTÓRIA E GEOGRAFIA DO MARANHÃO -->
+<h2 id="hm">8. História e Geografia do Maranhão</h2>
+
+<h3>I. História do Estado do Maranhão</h3>
+<table>
+    <tr><th>Código</th><th>Tópico</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos</th></tr>
+    <tr>
+        <td class="codigo">HM 1</td>
+        <td class="topico"><a href="https://www.todamateria.com.br/franca-equinocial/" target="_blank">França Equinocial 🔗</a></td>
+        <td class="item">Expedição de Daniel de La Touche</td>
+        <td class="subitem">Contexto colonial; fundação de São Luís (1612); disputa franco-portuguesa.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 2</td>
+        <td class="topico"><a href="https://www.todamateria.com.br/franca-equinocial/" target="_blank">Fundação de São Luís 🔗</a></td>
+        <td class="item">Fundação da cidade</td>
+        <td class="subitem">1612; estratégia de ocupação; motivações religiosas e econômicas.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 3</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Batalha_de_Guaxenduba" target="_blank">Batalha de Guaxenduba 🔗</a></td>
+        <td class="item">Contexto histórico</td>
+        <td class="subitem">1614; confronto entre franceses e portugueses/indígenas; vitória luso-brasileira.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 4</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Invasão Holandesa 🔗</a></td>
+        <td class="item">Invasão</td>
+        <td class="subitem">1641-1644; domínio holandês no Maranhão.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 5</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Expulsão dos Holandeses 🔗</a></td>
+        <td class="item">Processo de expulsão</td>
+        <td class="subitem">1644; resistência local e retomada portuguesa.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 6</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Estado do Maranhão e Grão-Pará 🔗</a></td>
+        <td class="item">Contexto histórico</td>
+        <td class="subitem">1621-1774; administração colonial separada; economia da Amazônia e MA.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 7</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/historiab/revolta-beckman.htm" target="_blank">Revolta de Bequimão 🔗</a></td>
+        <td class="item">Causas; objetivos</td>
+        <td class="subitem">1684; liderada por Manuel Beckman; motivos econômicos (Companhia de Comércio) e políticos.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 8</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/historiab/revolta-beckman.htm" target="_blank">Companhia de Comércio 🔗</a></td>
+        <td class="item">Maranhão e Grão-Pará</td>
+        <td class="subitem">Monopólio comercial que gerou insatisfação; papel na Revolta de Bequimão.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 9</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Período Imperial 🔗</a></td>
+        <td class="item">Adesão do Maranhão</td>
+        <td class="subitem">Aderiu à Independência do Brasil em 1823, após a Batalha do Jenipapo.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 10</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Independência do Brasil 🔗</a></td>
+        <td class="item">Contexto no Maranhão</td>
+        <td class="subitem">1822-1823; conflitos entre luso-brasileiros e portugueses no estado.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 11</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Batalha do Jenipapo 🔗</a></td>
+        <td class="item">Causas da não adesão</td>
+        <td class="subitem">13 de março de 1823; derrota dos patriotas maranhenses; atrasou a adesão.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 12</td>
+        <td class="topico"><a href="https://www.todamateria.com.br/balaiada/" target="_blank">Balaiada 🔗</a></td>
+        <td class="item">Caracterização; causas</td>
+        <td class="subitem">1838-1841; revolta popular (vaqueiros, escravos, fazendeiros) contra o governo imperial.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 13</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Período Republicano 🔗</a></td>
+        <td class="item">Adesão à República</td>
+        <td class="subitem">1889; apoio das elites agroexportadoras do Maranhão.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 14</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Revolução de 1930 🔗</a></td>
+        <td class="item">Maranhão</td>
+        <td class="subitem">Impacto da Revolução Vargas no estado; intervenção federal e mudanças políticas.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 15</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Vitorinismo 🔗</a></td>
+        <td class="item">Greve de 1951</td>
+        <td class="subitem">Período político de Vitorino Freire (interventor e governador); greve geral de 1951 por melhores salários.</td>
+    </tr>
+    <tr>
+        <td class="codigo">HM 16</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Segunda metade do século XX 🔗</a></td>
+        <td class="item">Principais fatos políticos, econômicos e sociais</td>
+        <td class="subitem">Golpe de 64, ditadura militar, grandes projetos (Carajás, ALUMAR), êxodo rural, urbanização.</td>
+    </tr>
+</table>
+
+<h3>II. Geografia do Estado do Maranhão</h3>
+<table>
+    <tr><th>Código</th><th>Tópico</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos</th></tr>
+    <tr>
+        <td class="codigo">GM 1</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Localização 🔗</a></td>
+        <td class="item">Superfície; limites; fronteiras; pontos extremos</td>
+        <td class="subitem">Localização (Norte/Nordeste), limites com PI, TO, PA, BA e Oceano Atlântico.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 2</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Áreas de Proteção Ambiental 🔗</a></td>
+        <td class="item">APAs</td>
+        <td class="subitem">APA do Maracanã, Upaon-Açu, etc.; regras de preservação.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 3</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Parques Nacionais 🔗</a></td>
+        <td class="item">Parques do Maranhão</td>
+        <td class="subitem">Lençóis Maranhenses (Parque Nacional), Parque dos Preguiças, Delta do Parnaíba.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 4</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Clima 🔗</a></td>
+        <td class="item">Pluviosidade; temperatura</td>
+        <td class="subitem">Tropical úmido (litoral), tropical semiúmido (interior), tropical de altitude; período chuvoso e seco.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 5</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Geomorfologia 🔗</a></td>
+        <td class="item">Aspectos gerais</td>
+        <td class="subitem">Planícies litorâneas, chapadas e depressões.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 6</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Geologia 🔗</a></td>
+        <td class="item">Recursos minerais</td>
+        <td class="subitem">Ferro (Carajás), bauxita, calcário, gipsita.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 7</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Relevo 🔗</a></td>
+        <td class="item">Planaltos; planícies; baixadas</td>
+        <td class="subitem">Planalto do Maranhão-Piauí, Planície do Parnaíba, Baixada Maranhense (área inundável).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 8</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Hidrografia 🔗</a></td>
+        <td class="item">Rios maranhenses</td>
+        <td class="subitem">Perenes, intermitentes; regime pluvial.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 9</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Bacia do Parnaíba 🔗</a></td>
+        <td class="item">Características</td>
+        <td class="subitem">Rio principal formador do delta; pesca e navegação.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 10</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Bacia do Gurupi 🔗</a></td>
+        <td class="item">Características</td>
+        <td class="subitem">Fronteira com o Pará; potencial hidrelétrico.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 11</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Bacia Tocantins-Araguaia 🔗</a></td>
+        <td class="item">Características</td>
+        <td class="subitem">Trecho maranhense (lago de hidrelétrica, Tucuruí influencia).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 12</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Bacias genuinamente maranhenses 🔗</a></td>
+        <td class="item">Características</td>
+        <td class="subitem">Bacias dos rios Itapecuru, Munim, Mearim, Pindaré – fundamentais para a pecuária e agricultura.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 13</td>
+        <td class="topico"><a href="https://brasilescola.uol.com.br/brasil/aspectos-naturais-maranhao.htm" target="_blank">Vegetação 🔗</a></td>
+        <td class="item">Floresta; Cerrado; Cocais</td>
+        <td class="subitem">Amazônica (norte), Cerrado (sul/centro), Mata dos Cocais (babaçu) – transição.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 14</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/populacao-do-maranhao/" target="_blank">População 🔗</a></td>
+        <td class="item">Povoamento; urbanização; densidade; movimentos populacionais</td>
+        <td class="subitem">Alta concentração no litoral (São Luís), êxodo rural, migração interestadual.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 15</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Agricultura 🔗</a></td>
+        <td class="item">Caracterização; principais produtos</td>
+        <td class="subitem">Arroz, soja, mandioca, cana-de-açúcar; produção de grãos em expansão (Matopiba).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 16</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Pecuária 🔗</a></td>
+        <td class="item">Caracterização</td>
+        <td class="subitem">Bovinocultura (corte e leite), bubalinos na Baixada.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 17</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Extrativismo 🔗</a></td>
+        <td class="item">Vegetal; animal; mineral</td>
+        <td class="subitem">Babaçu (vegetal), caranguejo/peixe (animal), minério de ferro (mineral).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 18</td>
+        <td class="topico"><a href="https://www.infoescola.com/geografia/geografia-do-maranhao/" target="_blank">Parque Industrial 🔗</a></td>
+        <td class="item">Indústrias de base; transformação</td>
+        <td class="subitem">Alumar (alumina), refinaria de bauxita, processos de beneficiamento mineral.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 19</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Setor Terciário 🔗</a></td>
+        <td class="item">Comércio; telecomunicações; transportes</td>
+        <td class="subitem">Polo comercial em São Luís, expansão da fibra ótica, rodovias (BR-135, BR-010).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 20</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Malha Viária 🔗</a></td>
+        <td class="item">Rodovias</td>
+        <td class="subitem">BR-135 (MA/PI), BR-010 (Belém-Brasília), estaduais (MA-106, etc.).</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 21</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Portos e Aeroportos 🔗</a></td>
+        <td class="item">Infraestrutura</td>
+        <td class="subitem">Porto do Itaqui (exportação de minério, grãos), Porto da Ponta da Madeira (Vale), Aeroporto Internacional de São Luís.</td>
+    </tr>
+    <tr>
+        <td class="codigo">GM 22</td>
+        <td class="topico"><a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank">Cultura Maranhense 🔗</a></td>
+        <td class="item">Aspectos culturais</td>
+        <td class="subitem">Bumba meu boi, tambor de crioula, reggae, culinária (arroz de cuxá, peixe), festas juninas.</td>
+    </tr>
+</table>
+<hr>
+<!-- FIM DA SEÇÃO 8 -->
+
+<!-- 9. DIREITOS HUMANOS -->
+<h2 id="dh">9. Noções de Direitos Humanos</h2>
+<table>
+    <tr><th>Código</th><th>Tópico</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos</th></tr>
+    <tr><td class="codigo">DH 1</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Direitos_humanos" target="_blank">Teoria Geral 🔗</a></td><td class="item">Direitos Fundamentais vs Humanos</td><td class="subitem">Universalidade, historicidade, inalienabilidade.</td></tr>
+    <tr><td class="codigo">DH 2</td><td class="topico"><a href="https://www.ohchr.org/pt/human-rights/universal-declaration" target="_blank">Declaração Universal 🔗</a></td><td class="item">ONU – 1948</td><td class="subitem">Dignidade, liberdade, igualdade; gerações de direitos.</td></tr>
+    <tr><td class="codigo">DH 3</td><td class="topico"><a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Agenda 2030 🔗</a></td><td class="item">ODS da ONU</td><td class="subitem">17 Objetivos de Desenvolvimento Sustentável.</td></tr>
+    <tr><td class="codigo">DH 4</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank">Estatuto da Pessoa com Deficiência 🔗</a></td><td class="item">Lei 13.146/2015</td><td class="subitem">Capacidade civil, curatela, acessibilidade.</td></tr>
+    <tr><td class="codigo">DH 5</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/leis/l10098.htm" target="_blank">Acessibilidade e Prioridade 🔗</a></td><td class="item">Leis 10.098/2000 e 10.048/2000</td><td class="subitem">Normas de acessibilidade; prioridade de atendimento.</td></tr>
+    <tr><td class="codigo">DH 6</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12288.htm" target="_blank">Estatuto da Igualdade Racial 🔗</a></td><td class="item">Lei 12.288/2010</td><td class="subitem">Políticas de ações afirmativas, repressão ao racismo.</td></tr>
+</table>
+<hr>
+
+<!-- ================================================================ -->
+<!-- PARTE II -->
+<h1>PARTE II – CONHECIMENTOS ESPECÍFICOS (CARGO 16)</h1>
+
+<!-- 10. DIREITO CONSTITUCIONAL ESPECÍFICO -->
+<h2 id="dc">10. Noções de Direito Constitucional (Específico)</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">DC 1</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">CF/88 – Conceitos e Emendas 🔗</a></td><td class="item">Classificação da Constituição</td><td class="subitem">Origem, conteúdo, estabilidade; emendas constitucionais.</td></tr>
+    <tr><td class="codigo">DC 2</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Direitos e Garantias 🔗</a></td><td class="item">Individuais, sociais, políticos</td><td class="subitem">Art. 5º, 6º, 14 a 16, 17.</td></tr>
+    <tr><td class="codigo">DC 3</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Organização Político-Administrativa 🔗</a></td><td class="item">Repartição de competências</td><td class="subitem">Art. 22, 24, 30.</td></tr>
+    <tr><td class="codigo">DC 4</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Administração Pública 🔗</a></td><td class="item">Princípios e servidores</td><td class="subitem">LIMPE; requisitos para provimento, estabilidade.</td></tr>
+    <tr><td class="codigo">DC 5</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Legislativo 🔗</a></td><td class="item">Congresso e Casas</td><td class="subitem">Câmara, Senado; deputados e senadores.</td></tr>
+    <tr><td class="codigo">DC 6</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Executivo 🔗</a></td><td class="item">Presidente e Ministros</td><td class="subitem">Art. 84; ministros de Estado.</td></tr>
+    <tr><td class="codigo">DC 7</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Poder Judiciário 🔗</a></td><td class="item">Organização e Competências</td><td class="subitem">STF, STJ; competências.</td></tr>
+    <tr><td class="codigo">DC 8</td><td class="topico"><a href="https://www.cnj.jus.br/" target="_blank">CNJ 🔗</a></td><td class="item">Conselho Nacional de Justiça</td><td class="subitem">Composição e competência.</td></tr>
+    <tr><td class="codigo">DC 9</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Funções Essenciais 🔗</a></td><td class="item">MP, Advocacia, Defensoria</td><td class="subitem">MP; Advocacia Pública; Defensoria.</td></tr>
+    <tr><td class="codigo">DC 10</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank">Artigos Específicos 🔗</a></td><td class="item">CF art. 23, 170, 225, 231</td><td class="subitem">Competência comum; atividade econômica; meio ambiente; direitos indígenas.</td></tr>
+</table>
+<hr>
+
+<!-- 11. DIREITO ADMINISTRATIVO ESPECÍFICO -->
+<h2 id="da">11. Noções de Direito Administrativo (Específico)</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">DA 1</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Administra%C3%A7%C3%A3o_p%C3%BAblica" target="_blank">Organização Administrativa 🔗</a></td><td class="item">Centralização/Descentralização</td><td class="subitem">Foco em autarquias, fundações, EP, SEM.</td></tr>
+    <tr><td class="codigo">DA 2</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Ato_administrativo" target="_blank">Ato Administrativo 🔗</a></td><td class="item">Elementos, atributos</td><td class="subitem">CFFMO; atributos.</td></tr>
+    <tr><td class="codigo">DA 3</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Agente_p%C3%BAblico" target="_blank">Agentes Públicos 🔗</a></td><td class="item">Espécies e cargos</td><td class="subitem">Cargo, emprego, função; arts. 37 a 41.</td></tr>
+    <tr><td class="codigo">DA 4</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Poderes_administrativos" target="_blank">Poderes 🔗</a></td><td class="item">Hierárquico, Disciplinar, etc.</td><td class="subitem">Uso e abuso do poder.</td></tr>
+    <tr><td class="codigo">DA 5</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank">Licitação (Lei 14.133) 🔗</a></td><td class="item">Modalidades e Procedimento</td><td class="subitem">Dispensa e inexigibilidade.</td></tr>
+    <tr><td class="codigo">DA 6</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Controle_da_administra%C3%A7%C3%A3o_p%C3%BAblica" target="_blank">Controle 🔗</a></td><td class="item">Interno, Judicial, Legislativo</td><td class="subitem">CGU, Tribunais de Contas.</td></tr>
+    <tr><td class="codigo">DA 7</td><td class="topico"><a href="https://pt.wikipedia.org/wiki/Responsabilidade_civil_do_Estado" target="_blank">Responsabilidade Civil 🔗</a></td><td class="item">Comissivo vs Omissivo</td><td class="subitem">Risco administrativo x risco integral.</td></tr>
+</table>
+<hr>
+
+<!-- 12. GESTÃO DE CONTRATOS -->
+<h2 id="gc">12. Gestão de Contratos</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">GC 1</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm" target="_blank">Lei 14.133/2021 🔗</a></td><td class="item">Normas gerais de contratação</td><td class="subitem">Prazos, garantias contratuais, subcontratação.</td></tr>
+    <tr><td class="codigo">GC 2</td><td class="topico"><a href="https://www.escolavirtual.gov.br/curso/104" target="_blank">Elaboração do Contrato 🔗</a></td><td class="item">Cláusulas e Níveis de Serviço</td><td class="subitem">Cláusulas essenciais; indicadores de nível de serviço.</td></tr>
+    <tr><td class="codigo">GC 3</td><td class="topico"><a href="https://www.escolavirtual.gov.br/curso/104" target="_blank">Fiscalização 🔗</a></td><td class="item">Papel do Fiscal de Contrato</td><td class="subitem">Atribuições: verificar, anotar, medir, atestar.</td></tr>
+    <tr><td class="codigo">GC 4</td><td class="topico"><a href="https://www.gov.br/economia/pt-br/assuntos/gestao-de-contratos" target="_blank">Preposto da Contratada 🔗</a></td><td class="item">Representante da empresa</td><td class="subitem">Função e indicação formal.</td></tr>
+    <tr><td class="codigo">GC 5</td><td class="topico"><a href="https://www.gov.br/economia/pt-br/assuntos/gestao-de-contratos" target="_blank">Acompanhamento 🔗</a></td><td class="item">Monitoramento contínuo</td><td class="subitem">Controle de prazos e metas.</td></tr>
+    <tr><td class="codigo">GC 6</td><td class="topico"><a href="https://licitacoesecontratos.tcu.gov.br/" target="_blank">Irregularidades 🔗</a></td><td class="item">Registro e Notificação</td><td class="subitem">Auto de infração, prazos.</td></tr>
+    <tr><td class="codigo">GC 7</td><td class="topico"><a href="https://www.gov.br/economia/pt-br/assuntos/gestao-de-contratos" target="_blank">Sanções Administrativas 🔗</a></td><td class="item">Penalidades previstas</td><td class="subitem">Advertência, multa, suspensão, inidoneidade.</td></tr>
+</table>
+<hr>
+
+<!-- 13. EXECUÇÃO ORÇAMENTÁRIA E FINANCEIRA -->
+<h2 id="eof">13. Execução Orçamentária e Financeira</h2>
+<table>
+    <tr><th>Código</th><th>Tópico Principal</th><th>Itens de Estudo (Detalhados)</th><th>Subitens / Desdobramentos Obrigatórios</th></tr>
+    <tr><td class="codigo">EOF 1</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Programação e Execução 🔗</a></td><td class="item">Orçamento Público</td><td class="subitem">Programação financeira; execução orçamentária.</td></tr>
+    <tr><td class="codigo">EOF 2</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Estágios da Despesa 🔗</a></td><td class="item">Empenho, Liquidação, Pagamento</td><td class="subitem">Empenho ordinário, estimativo, global; liquidação; pagamento.</td></tr>
+    <tr><td class="codigo">EOF 3</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">GRU 🔗</a></td><td class="item">Guia de Recolhimento da União</td><td class="subitem">Instrumento de arrecadação; preenchimento.</td></tr>
+    <tr><td class="codigo">EOF 4</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Sistemas de Informação 🔗</a></td><td class="item">Ferramentas de controle</td><td class="subitem">SIAFI, SIAFEM, SISTN.</td></tr>
+    <tr><td class="codigo">EOF 5</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Restos a Pagar 🔗</a></td><td class="item">Despesas não quitadas</td><td class="subitem">Processados e Não Processados; Lei 4.320/64.</td></tr>
+    <tr><td class="codigo">EOF 6</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Suprimento de Fundos 🔗</a></td><td class="item">Adiantamento</td><td class="subitem">Pequenas despesas urgentes; prestação de contas.</td></tr>
+    <tr><td class="codigo">EOF 7</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Conformidade 🔗</a></td><td class="item">Diária e Documental</td><td class="subitem">Validação de documentos; verificação de saldos.</td></tr>
+    <tr><td class="codigo">EOF 8</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Rol de Responsáveis 🔗</a></td><td class="item">Agentes públicos</td><td class="subitem">Ordenador de despesa; fiscais.</td></tr>
+    <tr><td class="codigo">EOF 9</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade" target="_blank">Retenção de Tributos 🔗</a></td><td class="item">IR, INSS, CSLL, PIS/COFINS</td><td class="subitem">Retenção na fonte sobre serviços.</td></tr>
+    <tr><td class="codigo">EOF 10</td><td class="topico"><a href="https://siafi.tesouro.gov.br/" target="_blank">SIAFI e CPR 🔗</a></td><td class="item">Contas a Pagar/Receber</td><td class="subitem">SIAFI; CPR.</td></tr>
+    <tr><td class="codigo">EOF 11</td><td class="topico"><a href="https://www.gov.br/tesouronacional/pt-br/contabilidade/legislacao/mcasp" target="_blank">MCASP 🔗</a></td><td class="item">Manual de Contabilidade Aplicada ao Setor Público</td><td class="subitem">11ª edição: PCASP, demonstrações contábeis.</td></tr>
+    <tr><td class="codigo">EOF 12</td><td class="topico"><a href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm" target="_blank">Lei de Responsabilidade Fiscal 🔗</a></td><td class="item">LC 101/2000</td><td class="subitem">PPA, LDO, LOA; limites de despesa; RGF e RREO.</td></tr>
+</table>
+
+<hr>
+<p style="text-align:center; color:#666; font-size:10pt;">Documento gerado com base no edital do TCE-MA – Cargo 16 (Técnico-Administrativa).<br>Todos os links foram revisados e estão funcionando.</p>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <p><strong>© 2026 Nailton Rodrigues.</strong> Todos os direitos reservados.</p>
+    <p>Este material foi organizado para fins de divulgação e estudo. A reprodução parcial ou integral deve ser autorizada pelo autor.</p>
+</footer>
+
+</div> <!-- Fim .page -->
+
+<!-- ===== BOTÃO VOLTAR AO TOPO (aparece apenas em mobile) ===== -->
+<a href="#" class="back-to-top" title="Voltar ao topo">⬆</a>
+
+</body>
+</html>
